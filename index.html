@@ -1,0 +1,105 @@
+<!Doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	
+	<!-- font awesome -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	
+	<!-- jquery -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	
+	<!-- fonts -->
+	<link rel="preconnect" href="https://fonts.googleapis.com" />
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+	<link href="https://fonts.googleapis.com/css2?family=News+Cycle&display=swap" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
+	
+	<!-- Style Sheet -->
+	<link rel="stylesheet" href="style.css" />
+
+	
+	<title>Lego Art Designer</title>
+
+</head>
+<body>
+
+	<header>
+
+	</header>
+
+	<main>
+	
+	<!-- <div class="container-burger"> -->
+		<!-- <div class="container-burger-rotate"> -->
+			<!-- <div class="burger-line line1"></div> -->
+			<!-- <div class="burger-line line2"></div> -->
+			<!-- <div class="burger-line line3"></div> -->
+		<!-- </div> -->
+	<!-- </div> -->
+	
+		<!-- <div> -->
+		<!-- <label for="colorpicker">Color Picker:</label> -->
+		<!-- <input type="color" id="colorpicker" value="#0000ff"> -->
+	<!-- </div> -->
+	
+	<h1>Lego Art Designer</h1>
+	
+	<div class="column">
+		<h3>Choose Color Pallet</h3>
+		
+		<select class="color-pallet-list" name="color-pallet-list">
+			<option value="palletNone">--Select a Pallet--</option>
+			<option value="palletIronMan">Iron Man</option>
+			<option value="palletHarryPotter">Harry Potter</option>
+			<option value="palletSith">Sith (Star Wars)</option>
+			<option value="palletBatman">Batman</option>
+			<option value="palletBeatles">Beatles</option>
+		</select>
+
+		<div class="color-pallet-choices"></div>
+	</div>
+	
+	<br>
+
+	<div class="center">
+		<div class="btn-options">
+			<div class="column current-color">
+				<h3>Current Color</h3>
+				<div class="lego-brick" id="current-color"></div>
+			</div>
+			<div class="column">
+				<input type="button" value="Clear All" id="btn-clear-all" ></input>
+				<!-- <input type="button" value="Save Design" ></input> -->
+			</div>
+		</div>
+	</div>
+	
+	<br>
+	
+	<div class="center">
+		<div class="container-lego-art">
+		</div>
+	</div>
+	
+	<div class="center">
+		<div class="container-parts">
+			<h3>Required parts</h3>
+			<div class="display-parts"></div>
+		</div>
+	</div>
+	
+	</main>
+	<footer>
+		&copy;<span class="author"></span>
+		<span class="year"></span>
+		<span class="version"></span>
+	</footer>
+	
+	<script src="colorpallet.js"></script>
+	<script src="pallets.js"></script>
+	<script src="main.js"></script>
+ </body>
+ </html>

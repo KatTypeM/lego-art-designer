@@ -1,0 +1,217 @@
+ /*
+Theme Name: Leog Art Designer
+Author: Jason DeBay
+Author URI: https://kattypem.com
+Theme URI: https://kattypem.com
+Description: Lego Art Designer
+Version: 1.0.0
+*/
+ 
+ /* styles css */
+*{
+	margin: 0;
+	padding: 0;
+}
+:root{
+	--version: 1.0.0;
+	--author: Kat Type M Productions;
+	--bg: #ffffd9 ;
+	--lego-width: 12px;
+	--current-color: #333;
+}
+body{
+	text-align: center;
+	background: var(--bg);
+}
+
+
+
+/* burger css */
+/*
+.container-burger{
+	height: 40px;
+	width: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: black;
+	border-radius: 8px;
+	
+}
+.container-burger-rotate{
+	transition: all 0.5s;
+}
+.burger-line{
+	height: 5px;
+	width: 32px;
+	border-radius: 3px;
+	background: linear-gradient(90deg, white, blue, blue, blue);
+	margin: 4px 0;
+	transition: all 0.5s;
+}
+.burger-rotate{
+	transform: rotate(90deg);
+}
+.toggle-x .line1{
+	transform: rotate(-45deg) translate(-7px, 6px);
+}
+.toggle-x .line2{
+	width: 0;
+	margin-left: 26px;
+}
+.toggle-x .line3{
+	transform: rotate(45deg) translate(-7px, -6px);
+}
+.toggle-color .line1, .toggle-color .line3{
+	animation-name: toggle-color;
+	animation-duration: 0.5s;
+	animation-fill-mode: forwards;
+}
+@keyframes toggle-color{
+	0%{
+		background: linear-gradient(90deg, white, blue, blue, blue);
+	}
+	25%{
+		background: linear-gradient(90deg, blue, blue, blue, white);
+	}
+	50%{
+		background: linear-gradient(90deg, blue, blue, white, white);
+	}
+	75%{
+		background: linear-gradient(90deg, blue, white, white, white);
+	}
+	100%{
+		background: linear-gradient(90deg, white, white, white, white);
+	}
+}
+*/
+
+
+.center{
+	display: flex;
+	justify-content: space-around;
+}
+.column{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.color-pallet-list{
+	padding: 8px 15px;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+.color-pallet-choices{
+	display: flex;
+	flex-direction: row;
+	background: black;
+	justify-content: center;
+	border-radius: 10px;
+	padding: 10px;
+	width: calc( (var(--lego-width) + 4px) * 16);
+	margin-top: 10px;
+}
+.color-pallet-choices .lego-brick{
+	cursor: pointer;
+}
+.container-lego-art{
+	width: calc( ((var(--lego-width) + 4px) * 16 * 3) + 30px ) ;
+	display: grid;
+	column-gap: 15px;
+	row-gap: 15px;
+	grid-template-columns: 1fr 1fr 1fr;
+	margin-bottom: 20px;
+}
+.btn-options{
+	display: flex;
+	flex-direction: row;
+}
+#btn-clear-all{
+	box-sizing: border-box;
+	background: black;
+	border-radius: 10px;
+	padding: 10px 15px;
+	color: white;
+	margin-left: 10px;
+	height: 56px;
+	cursor: pointer;
+}
+.current-color{
+	box-sizing: border-box;
+	background: black;
+	border-radius: 10px;
+	padding: 5px 15px;
+	color: white;
+	height: 56px;
+}
+.current-color #current-color{
+	cursor: pointer;
+}
+.panel{
+	width: calc( (var(--lego-width) + 4px) * 16);
+	background: black;
+	padding: 4px;
+}
+.container-16x16{
+	width: calc( (var(--lego-width) + 4px) * 16);
+}
+.row{
+	height: calc(var(--lego-width) + 4px);
+display: flex;
+	flex-direction: row;
+}
+.lego-brick{
+	height: var(--lego-width);
+	width: var(--lego-width);
+	border-radius: 50%;
+	background-color: #ffffd9 ;
+	margin: 2px;
+	transition: 0.5s ease-in;
+	border: 1px solid white;
+	display:flex;
+	justify-content: center;
+	align-items: center;
+}
+.lego-brick-circle{
+	box-sizing: border-box;
+	height: calc(var(--lego-width) - 4px);
+	width: calc(var(--lego-width) - 4px);
+	border: 1px solid black;
+	border-radius: 50%;
+	opacity: 0;
+}
+
+/* edit for variable color */
+.lego-brick:hover{
+	background: var(--current-color);
+}
+.container-parts{
+	margin-bottom: 20px;
+}
+.display-parts{
+	display: grid;
+	width: calc( ((var(--lego-width) + 4px) * 16 * 3) + 30px ) ;
+	display: grid;
+	column-gap: 15px;
+	row-gap: 15px;
+	grid-template-columns: 1fr 1fr 1fr;
+	padding: 10px 15px;
+	background: black;
+	border-radius: 10px;
+}
+.container-brick-color-parts{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	width: 240px;
+	padding: 5px 15px;
+	box-sizing: border-box;
+	color: white;
+}
+.container-brick-color{
+	display: flex;
+	flex-direction: row;
+	color:white;
+	gap: 5px;
+}
